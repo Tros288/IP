@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ร้านตัวอย่าง — บทเรียน HTML สัปดาห์ที่ 1</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -36,20 +37,25 @@
             <h2 id="cart-title">ตะกร้าตัวอย่าง</h2>
             <p>ยังไม่มีสินค้าในตะกร้า</p>
         </section>
-        <section aria-labelledby="inquiry-title">
-            <h2 id="inquiry-title">แบบฟอร์มสอบถามสินค้า</h2>
-            <form method="get">
-                <label for="product">สินค้าที่สนใจ</label>
-                <select id="product" name="productId">
-                    <option value="notebook">สมุดบันทึก</option>
-                </select>
-                <label for="quantity">จำนวนที่สนใจ</label>
-                <input type="number" id="quantity" name="quantity" min="1" required>
-
-                <button type="submit">ทดลองส่งข้อมูล</button>
-            </form>
-        </section>
     </main>
+
+    <form class="interest-form" method="GET">
+        <div class="field">
+            <label for="product">สินค้าที่สนใจ</label>
+            <select id="product" name="productId" required>
+                <option value="notebook">สมุดบันทึก</option>
+                <option value="pen">ปากกา</option>
+            </select>
+        </div>
+        <div class="field">
+            <label for="quantity">จำนวนที่สนใจ</label>
+            <input id="quantity" name="quantity" type="number" min="1" required>
+        </div>
+        <button type="submit">ทดลองส่งข้อมูล</button>
+        <button type="reset">คืนค่าเริ่มต้น</button>
+        <a href="#">เริ่มตัวอย่างใหม่</a>
+    </form>
+
     <footer>
         <p>ตัวอย่างสำหรับฝึกอ่านโครงสร้างเอกสารและ DOM</p>
     </footer>
